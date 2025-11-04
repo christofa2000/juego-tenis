@@ -1,0 +1,59 @@
+{
+  "common": {
+    "whatsapp": "WhatsApp",
+    "reserve": "Reservar clase",
+    "viewClasses": "Ver clases",
+    "readMore": "Leer más",
+    "contact": "Contacto",
+    "phone": "Teléfono",
+    "address": "Dirección",
+    "hours": "Horarios"
+  },
+  "home": {
+    "title": "Clases de tenis en Caballito y Núñez",
+    "subtitle": "Metodología con grupos reducidos y acompañamiento cercano.",
+    "features": {
+      "greenCourt": "Clases en predio verde",
+      "centralHours": "Horarios centrales (13–22)",
+      "smallGroups": "Grupos reducidos"
+    },
+    "cta": {
+      "primary": "Reservar mi clase",
+      "secondary": "Ver más información"
+    }
+  },
+  "classes": {
+    "title": "Nuestras Clases",
+    "subtitle": "Clases adaptadas a tu nivel y objetivos",
+    "types": {
+      "individual": "Individuales",
+      "group": "Grupales",
+      "kids": "Niños",
+      "beginner": "Principiantes",
+      "intermediate": "Intermedios",
+      "advanced": "Avanzados",
+      "custom": "Personalizadas"
+    }
+  },
+  "testimonials": {
+    "title": "Lo que dicen nuestros alumnos",
+    "subtitle": "Testimonios de la comunidad Juegotenis"
+  },
+  "location": {
+    "title": "Ubicación",
+    "subtitle": "Nos encontramos en Caballito y Núñez",
+    "address": "Caballito y Núñez, Buenos Aires",
+    "caballito": "Doblás 1043, Caballito, Buenos Aires",
+    "nunez": "Av. del Libertador 7208, C1429 Cdad. Autónoma de Buenos Aires",
+    "sede": "Sede"
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "Estamos para ayudarte",
+    "phone": "11 2311-0735",
+    "whatsappMessage": "Hola, me interesa conocer más sobre las clases de tenis"
+  }
+}
+
+
+

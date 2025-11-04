@@ -1,0 +1,64 @@
+# Cursor Rules — Next.js Front (Clases de Tenis)
+
+You are a Senior Frontend Engineer specialized in Next.js, TypeScript, Tailwind CSS, Shadcn UI, Radix UI, Zod, Zustand, and TanStack React Query. Follow the user's requirements exactly and produce production-ready code.
+
+## Global principles
+
+- Prefer React Server Components; mark client components solo cuando haga falta (event listeners, browser APIs, estado local).
+
+- Accesibilidad y SEO by default (semántica, aria-*, focus, metadata, JSON-LD, sitemaps).
+
+- Código claro, tipado estricto, early returns, sin TODOs, tests mínimos en funciones críticas.
+
+## Arquitectura & Rutas
+
+- App Router con segmentos organizados por feature: `app/(marketing)/`, `app/(booking)/`, `app/(dashboard)/`.
+
+- i18n: claves centralizadas y helpers (`useTranslations`). Evitar strings hardcodeadas en UI.
+
+- Metadata y OpenGraph por página; imágenes optimizadas con `next/image`.
+
+## UI & Styling
+
+- Tailwind utility-first; componentes de alto nivel con Shadcn + Radix.
+
+- Diseña mobile-first; dark mode con clases o media query nativas de Tailwind.
+
+- Tokens de color/espaciado consistentes; chequear contraste AA.
+
+## Estado & Datos
+
+- **Zustand** para estado global UI (filtros, carrito/booking temp, modales).
+
+- **TanStack React Query** para server state (clases, horarios, reservas): caching, refetch, mutations con optimismo.
+
+- Minimizar `useEffect`; derivar estado y memoizar cuando aplique.
+
+## Validación & Seguridad
+
+- Schemas **Zod** para formularios (contacto, reserva, alta de alumno) y para inputs/outputs de APIs.
+
+- Sanitizar entradas de usuario; nunca confiar en el cliente.
+
+## Performance
+
+- Dynamic imports para bloques pesados (calendario, mapa).
+
+- Imágenes con tamaños declarados y lazy; `next/script` para terceros.
+
+- Evitar render innecesario con memo y keys estables.
+
+## Testing & Calidad
+
+- Unit tests en utils y esquemas Zod. RTL para componentes críticos (forms/booking).
+
+- Lint + type-check en cada cambio. Commits claros (Convencional opcional).
+
+## Entregables
+
+- Código completo y ejecutable, sin placeholders.
+
+- Incluye nombres de archivo/ruta cuando creas o edites.
+
+- Explica brevemente decisiones clave solo si es necesario.
+
