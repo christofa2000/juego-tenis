@@ -3,11 +3,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { Clock, MapPin, Phone } from "lucide-react";
-import { useTranslations } from "next-intl";
 
 export function ContactInfo() {
-  const t = useTranslations("contact");
-
   return (
     <div className="space-y-6">
       <Card>
@@ -19,7 +16,7 @@ export function ContactInfo() {
               </div>
               <div>
                 <h3 className="font-semibold mb-1">Teléfono</h3>
-                <p className="text-muted-foreground">{t("phone")}</p>
+                <p className="text-muted-foreground">11 2311-0735</p>
               </div>
             </div>
 

@@ -1,22 +1,18 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
+import Link from 'next/link';
 import Image from 'next/image';
 import { Phone, MapPin, Instagram, Youtube } from 'lucide-react';
 import { CtaWhatsapp } from '@/components/cta-whatsapp';
 
 export function SiteFooter() {
-  const t = useTranslations('common');
-  const tContact = useTranslations('contact');
-  
   return (
     <footer className="border-t bg-muted/50">
       <div className="container px-4 py-12">
         <div className="grid gap-8 md:grid-cols-4">
           <div className="space-y-4">
             <Image
-              src="/brand/logo-dark.jpg"
+              src="/brand/logo-dark.jpeg"
               alt="Juegotenis"
               width={120}
               height={40}
@@ -54,15 +50,15 @@ export function SiteFooter() {
           </div>
           
           <div className="space-y-4">
-            <h3 className="font-semibold">{t('contact')}</h3>
+            <h3 className="font-semibold">Contacto</h3>
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2 text-muted-foreground">
                 <Phone className="h-4 w-4" />
-                {tContact('phone')}
+                11 2311-0735
               </li>
               <li className="flex items-center gap-2 text-muted-foreground">
                 <MapPin className="h-4 w-4" />
-                {tContact('address')}
+                Caballito y Núñez, Buenos Aires
               </li>
             </ul>
           </div>

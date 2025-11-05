@@ -1,6 +1,5 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
 import { MapPin } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import dynamic from 'next/dynamic';
@@ -15,18 +14,15 @@ const Map = dynamic(() => import('@/components/map'), {
 });
 
 export function MapSection() {
-  const t = useTranslations('location');
-  const tContact = useTranslations('contact');
-  
   return (
     <section id="ubicacion" className="py-20 scroll-mt-16">
       <div className="container px-4">
         <div className="mx-auto max-w-2xl text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            {t('title')}
+            Ubicación
           </h2>
           <p className="text-lg text-muted-foreground">
-            {t('subtitle')}
+            Nos encontramos en Caballito y Núñez
           </p>
         </div>
         
@@ -39,7 +35,7 @@ export function MapSection() {
                 </div>
                 <div className="space-y-4">
                   <div>
-                    <h3 className="text-xl font-semibold mb-3">{t('title')}</h3>
+                    <h3 className="text-xl font-semibold mb-3">Ubicación</h3>
                     <p className="text-sm text-muted-foreground mb-4">
                       Nos encontramos en dos ubicaciones estratégicas, ambas con fácil acceso y excelente conectividad.
                     </p>

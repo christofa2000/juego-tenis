@@ -1,6 +1,5 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -24,8 +23,6 @@ const reservationSchema = z.object({
 type ReservationFormData = z.infer<typeof reservationSchema>;
 
 export function ReservationForm() {
-  const t = useTranslations('common');
-  
   const {
     register,
     handleSubmit,

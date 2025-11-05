@@ -1,26 +1,23 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
 import { TreePine, Clock, Users } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 export function Benefits() {
-  const t = useTranslations('home.features');
-  
   const benefits = [
     {
       icon: TreePine,
-      title: t('greenCourt'),
+      title: 'Clases en predio verde',
       description: 'Clases en espacios naturales y bien cuidados, con canchas en excelente estado.',
     },
     {
       icon: Clock,
-      title: t('centralHours'),
+      title: 'Horarios centrales (13–22)',
       description: 'Horarios flexibles que se adaptan a tu rutina, de 13:00 a 22:00 hs.',
     },
     {
       icon: Users,
-      title: t('smallGroups'),
+      title: 'Grupos reducidos',
       description: 'Atención personalizada con grupos reducidos para un aprendizaje efectivo.',
     },
   ];

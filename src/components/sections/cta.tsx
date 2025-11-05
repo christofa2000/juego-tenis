@@ -1,13 +1,10 @@
-'use client';
+"use client";
 
-import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
-import { Button } from '@/components/ui/button';
-import { CtaWhatsapp } from '@/components/cta-whatsapp';
+import { CtaWhatsapp } from "@/components/cta-whatsapp";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function CTA() {
-  const t = useTranslations('home');
-  
   return (
     <section className="py-20 bg-primary text-primary-foreground">
       <div className="container px-4">
@@ -18,14 +15,19 @@ export function CTA() {
           <p className="text-lg text-primary-foreground/90">
             Reserva tu clase hoy y comienza tu camino en el tenis
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button asChild size="lg" variant="secondary" className="w-full sm:w-auto">
-              <Link href="/reservar">{t('cta.primary')}</Link>
+            <Button
+              asChild
+              size="lg"
+              variant="secondary"
+              className="w-full sm:w-auto"
+            >
+              <Link href="/reservar">Reservar mi clase</Link>
             </Button>
-            <CtaWhatsapp 
-              size="lg" 
-              variant="outline" 
+            <CtaWhatsapp
+              size="lg"
+              variant="outline"
               className="w-full sm:w-auto bg-background/10 hover:bg-background/20 border-background/20 text-primary-foreground"
             />
           </div>

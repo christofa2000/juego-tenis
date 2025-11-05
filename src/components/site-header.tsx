@@ -1,19 +1,20 @@
-'use client';
+"use client";
 
-import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
-import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-import { CtaWhatsapp } from '@/components/cta-whatsapp';
-import { ThemeToggle } from '@/components/theme-toggle';
+import { CtaWhatsapp } from "@/components/cta-whatsapp";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import Link from "next/link";
 
 export function SiteHeader() {
-  const t = useTranslations('common');
-  
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[.backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-2" aria-label="Juegotenis - Inicio">
+        <Link
+          href="/"
+          className="flex items-center gap-2"
+          aria-label="Juegotenis - Inicio"
+        >
           <Image
             src="/brand/logo-dark.jpeg"
             alt="Juegotenis - Clases de tenis en Caballito y Núñez"
@@ -31,8 +32,11 @@ export function SiteHeader() {
             priority
           />
         </Link>
-        
-        <nav className="hidden md:flex items-center gap-6" aria-label="Navegación principal">
+
+        <nav
+          className="hidden md:flex items-center gap-6"
+          aria-label="Navegación principal"
+        >
           <Link
             href="/#clases"
             className="text-sm font-medium transition-colors hover:text-primary"
@@ -55,7 +59,7 @@ export function SiteHeader() {
             href="/contacto"
             className="text-sm font-medium transition-colors hover:text-primary"
           >
-            {t('contact')}
+            Contacto
           </Link>
         </nav>
 
@@ -70,4 +74,3 @@ export function SiteHeader() {
     </header>
   );
 }
-

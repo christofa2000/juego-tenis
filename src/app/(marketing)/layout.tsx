@@ -2,7 +2,7 @@ import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
 import { FloatingWhatsapp } from '@/components/floating-whatsapp';
 
-export default function BookingLayout({
+export default function MarketingLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -16,3 +16,4 @@ export default function BookingLayout({
     </>
   );
 }
+

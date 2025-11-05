@@ -1,6 +1,5 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
 import { MessageCircle } from 'lucide-react';
 import { Button, ButtonProps } from '@/components/ui/button';
 
@@ -14,10 +13,7 @@ export function WhatsAppButton({
   message,
   ...props 
 }: WhatsAppButtonProps) {
-  const t = useTranslations('common');
-  const tContact = useTranslations('contact');
-  
-  const defaultMessage = message || tContact('whatsappMessage');
+  const defaultMessage = message || 'Hola, me interesa conocer más sobre las clases de tenis';
   const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(defaultMessage)}`;
   
   return (
@@ -30,10 +26,10 @@ export function WhatsAppButton({
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={t('whatsapp')}
+        aria-label="WhatsApp"
       >
         <MessageCircle className="h-4 w-4" />
-        <span className="hidden sm:inline">{t('whatsapp')}</span>
+        <span className="hidden sm:inline">WhatsApp</span>
       </a>
     </Button>
   );

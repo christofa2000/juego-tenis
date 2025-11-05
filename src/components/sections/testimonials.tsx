@@ -1,12 +1,9 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
 import { Card, CardContent } from '@/components/ui/card';
 import { Star } from 'lucide-react';
 
 export function Testimonials() {
-  const t = useTranslations('testimonials');
-  
   const testimonials = [
     {
       name: 'María González',
@@ -39,10 +36,10 @@ export function Testimonials() {
       <div className="container px-4">
         <div className="mx-auto max-w-2xl text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            {t('title')}
+            Lo que dicen nuestros alumnos
           </h2>
           <p className="text-lg text-muted-foreground">
-            {t('subtitle')}
+            Testimonios de la comunidad Juegotenis
           </p>
         </div>
         

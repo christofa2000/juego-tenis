@@ -8,17 +8,14 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Link } from "@/i18n/navigation";
+import Link from "next/link";
 import { Clock, MapPin, Target, Users } from "lucide-react";
-import { useTranslations } from "next-intl";
 
 export function ClassesDetail() {
-  const t = useTranslations("classes");
-
   const classDetails = [
     {
       id: "individual",
-      title: t("types.individual"),
+      title: "Individuales",
       description: "Clases personalizadas uno a uno para mejorar tu técnica",
       duracion: "60 minutos",
       foco: "Técnica personalizada",
@@ -28,7 +25,7 @@ export function ClassesDetail() {
     },
     {
       id: "group",
-      title: t("types.group"),
+      title: "Grupales",
       description: "Aprende y disfruta en grupo con otros jugadores",
       duracion: "90 minutos",
       foco: "Juego en grupo y estrategia",
@@ -38,7 +35,7 @@ export function ClassesDetail() {
     },
     {
       id: "kids",
-      title: t("types.kids"),
+      title: "Niños",
       description: "Clases especiales para niños con metodología adaptada",
       duracion: "60 minutos",
       foco: "Diversión y aprendizaje",
@@ -48,7 +45,7 @@ export function ClassesDetail() {
     },
     {
       id: "beginner",
-      title: t("types.beginner"),
+      title: "Principiantes",
       description: "Perfecto para empezar desde cero",
       duracion: "90 minutos",
       foco: "Fundamentos básicos",
@@ -58,7 +55,7 @@ export function ClassesDetail() {
     },
     {
       id: "intermediate",
-      title: t("types.intermediate"),
+      title: "Intermedios",
       description: "Para jugadores que ya tienen experiencia",
       duracion: "90 minutos",
       foco: "Mejora técnica y táctica",
@@ -68,7 +65,7 @@ export function ClassesDetail() {
     },
     {
       id: "advanced",
-      title: t("types.advanced"),
+      title: "Avanzados",
       description: "Nivel competitivo para mejorar tu juego",
       duracion: "90 minutos",
       foco: "Perfeccionamiento y competencia",
@@ -84,9 +81,9 @@ export function ClassesDetail() {
         <div className="mx-auto max-w-4xl">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mb-4">
-              {t("title")}
+              Nuestras Clases
             </h1>
-            <p className="text-lg text-muted-foreground">{t("subtitle")}</p>
+            <p className="text-lg text-muted-foreground">Clases adaptadas a tu nivel y objetivos</p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">

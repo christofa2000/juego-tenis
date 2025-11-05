@@ -9,16 +9,13 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Link } from "@/i18n/navigation";
-import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 export function ClassesGrid() {
-  const t = useTranslations("classes");
-
   const classTypes = [
     {
       id: "individual",
-      title: t("types.individual"),
+      title: "Individuales",
       description: "Clases personalizadas uno a uno para mejorar tu técnica",
       badge: "Popular",
       nivel: "Todos los niveles",
@@ -26,7 +23,7 @@ export function ClassesGrid() {
     },
     {
       id: "group",
-      title: t("types.group"),
+      title: "Grupales",
       description: "Aprende y disfruta en grupo con otros jugadores",
       badge: null,
       nivel: "Todos los niveles",
@@ -34,7 +31,7 @@ export function ClassesGrid() {
     },
     {
       id: "kids",
-      title: t("types.kids"),
+      title: "Niños",
       description: "Clases especiales para niños con metodología adaptada",
       badge: "Destacado",
       nivel: "Principiante",
@@ -42,7 +39,7 @@ export function ClassesGrid() {
     },
     {
       id: "beginner",
-      title: t("types.beginner"),
+      title: "Principiantes",
       description: "Perfecto para empezar desde cero",
       badge: null,
       nivel: "Principiante",
@@ -50,7 +47,7 @@ export function ClassesGrid() {
     },
     {
       id: "intermediate",
-      title: t("types.intermediate"),
+      title: "Intermedios",
       description: "Para jugadores que ya tienen experiencia",
       badge: null,
       nivel: "Intermedio",
@@ -58,7 +55,7 @@ export function ClassesGrid() {
     },
     {
       id: "advanced",
-      title: t("types.advanced"),
+      title: "Avanzados",
       description: "Nivel competitivo para mejorar tu juego",
       badge: null,
       nivel: "Avanzado",
@@ -71,9 +68,9 @@ export function ClassesGrid() {
       <div className="container px-4">
         <div className="mx-auto max-w-2xl text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            {t("title")}
+            Nuestras Clases
           </h2>
-          <p className="text-lg text-muted-foreground">{t("subtitle")}</p>
+          <p className="text-lg text-muted-foreground">Clases adaptadas a tu nivel y objetivos</p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

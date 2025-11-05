@@ -2,15 +2,12 @@
 
 import { CtaWhatsapp } from "@/components/cta-whatsapp";
 import { Button } from "@/components/ui/button";
-import { Link } from "@/i18n/navigation";
-import { useTranslations } from "next-intl";
 import Image from "next/image";
+import Link from "next/link";
 
 export function Hero() {
-  const t = useTranslations("home");
-
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-background to-muted/20 py-20 md:py-32">
+    <section className="relative overflow-hidden bg-linear-to-b from-background to-muted/20 py-20 md:py-32">
       <div className="container px-4">
         <div className="mx-auto max-w-4xl text-center space-y-8">
           {/* Imagen principal */}
@@ -26,15 +23,15 @@ export function Hero() {
           </div>
 
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-            {t("title")}
+            Clases de tenis en Caballito y Núñez
           </h1>
           <p className="text-xl text-muted-foreground sm:text-2xl">
-            {t("subtitle")}
+            Metodología con grupos reducidos y acompañamiento cercano.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
             <Button asChild size="lg" className="w-full sm:w-auto">
-              <Link href="/reservar">{t("cta.primary")}</Link>
+              <Link href="/reservar">Reservar mi clase</Link>
             </Button>
             <CtaWhatsapp
               size="lg"

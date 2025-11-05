@@ -1,4 +1,4 @@
-import { Link } from '@/i18n/navigation';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
 export default function NotFound() {
@@ -14,3 +14,4 @@ export default function NotFound() {
     </div>
   );
 }
+

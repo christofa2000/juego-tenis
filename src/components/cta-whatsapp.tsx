@@ -3,7 +3,6 @@
 import { Button, ButtonProps } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { MessageCircle } from "lucide-react";
-import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 
@@ -25,19 +24,17 @@ export function CtaWhatsapp({
   offset,
   ...props
 }: CtaWhatsappProps) {
-  const t = useTranslations("common");
-  const tContact = useTranslations("contact");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);
 
-  const defaultMessage = message || tContact("whatsappMessage");
+  const defaultMessage = message || "Hola, me interesa conocer más sobre las clases de tenis";
   const utmParams = `utm_source=${utmSource}&utm_medium=whatsapp&utm_campaign=contact`;
   const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(
     defaultMessage
   )}&${utmParams}`;
 
-  // Botón “normal” (no flotante)
+  // Botón "normal" (no flotante)
   if (!floating) {
     return (
       <Button
@@ -47,11 +44,11 @@ export function CtaWhatsapp({
           "bg-[#25D366] hover:bg-[#25D366]/90 text-white",
           className
         )}
-        aria-label={t("whatsapp")}
+        aria-label="WhatsApp"
       >
         <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
           <MessageCircle className="h-4 w-4" />
-          <span className="hidden sm:inline">{t("whatsapp")}</span>
+          <span className="hidden sm:inline">WhatsApp</span>
         </a>
       </Button>
     );
@@ -79,7 +76,7 @@ export function CtaWhatsapp({
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={t("whatsapp")}
+        aria-label="WhatsApp"
         className={cn(
           "inline-flex items-center justify-center rounded-full h-14 w-14",
           "bg-[#25D366] text-white shadow-xl transition-transform",
