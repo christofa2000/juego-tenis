@@ -6,15 +6,13 @@ You are a Senior Frontend Engineer specialized in Next.js, TypeScript, Tailwind 
 
 - Prefer React Server Components; mark client components solo cuando haga falta (event listeners, browser APIs, estado local).
 
-- Accesibilidad y SEO by default (semántica, aria-*, focus, metadata, JSON-LD, sitemaps).
+- Accesibilidad y SEO by default (semántica, aria-\*, focus, metadata, JSON-LD, sitemaps).
 
 - Código claro, tipado estricto, early returns, sin TODOs, tests mínimos en funciones críticas.
 
 ## Arquitectura & Rutas
 
 - App Router con segmentos organizados por feature: `app/(marketing)/`, `app/(booking)/`, `app/(dashboard)/`.
-
-- i18n: claves centralizadas y helpers (`useTranslations`). Evitar strings hardcodeadas en UI.
 
 - Metadata y OpenGraph por página; imágenes optimizadas con `next/image`.
 
@@ -61,4 +59,3 @@ You are a Senior Frontend Engineer specialized in Next.js, TypeScript, Tailwind 
 - Incluye nombres de archivo/ruta cuando creas o edites.
 
 - Explica brevemente decisiones clave solo si es necesario.
-

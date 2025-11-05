@@ -15,7 +15,7 @@ export function SiteHeader() {
       <div className="container flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2" aria-label="Juegotenis - Inicio">
           <Image
-            src="/brand/logo-dark.jpg"
+            src="/brand/logo-dark.jpeg"
             alt="Juegotenis - Clases de tenis en Caballito y Núñez"
             width={120}
             height={40}

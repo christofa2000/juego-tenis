@@ -12,14 +12,15 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-background to-muted/20 py-20 md:py-32">
       <div className="container px-4">
-        <div className="mx-auto max-w-3xl text-center space-y-8">
+        <div className="mx-auto max-w-4xl text-center space-y-8">
+          {/* Imagen principal */}
           <div className="flex justify-center mb-8">
             <Image
-              src="/brand/logo-light.jpg"
-              alt="Juegotenis"
-              width={200}
-              height={80}
-              className="h-20 w-auto"
+              src="/brand/hero.png"
+              alt="Juegotenis - Clases de tenis"
+              width={1200}
+              height={600}
+              className="w-full h-auto rounded-lg shadow-lg"
               priority
             />
           </div>
@@ -40,20 +41,6 @@ export function Hero() {
               variant="outline"
               className="w-full sm:w-auto"
             />
-          </div>
-
-          {/* Opcional: Video corto */}
-          <div className="mt-12 rounded-lg overflow-hidden shadow-lg">
-            <video
-              className="w-full h-auto"
-              poster="/brand/ad-1.png"
-              controls
-              preload="metadata"
-              aria-label="Video promocional de Juegotenis"
-            >
-              <source src="/videos/promocional.mp4" type="video/mp4" />
-              <p>Tu navegador no soporta videos HTML5.</p>
-            </video>
           </div>
         </div>
       </div>
