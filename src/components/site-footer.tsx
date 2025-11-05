@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import Image from 'next/image';
-import { Phone, MapPin, Instagram, Youtube } from 'lucide-react';
-import { CtaWhatsapp } from '@/components/cta-whatsapp';
+import { CtaWhatsapp } from "@/components/cta-whatsapp";
+import { Instagram, MapPin, Phone, Youtube } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export function SiteFooter() {
   return (
@@ -19,36 +19,49 @@ export function SiteFooter() {
               className="h-10 w-auto"
             />
             <p className="text-sm text-muted-foreground">
-              Clases de tenis en Caballito y Núñez. Metodología con grupos reducidos y acompañamiento cercano.
+              Clases de tenis en Caballito y Núñez. Metodología con grupos
+              reducidos y acompañamiento cercano.
             </p>
           </div>
-          
+
           <div className="space-y-4">
             <h3 className="font-semibold">Enlaces</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/clases" className="text-muted-foreground hover:text-primary">
+                <Link
+                  href="/clases"
+                  className="text-muted-foreground hover:text-primary"
+                >
                   Clases
                 </Link>
               </li>
               <li>
-                <Link href="/testimonios" className="text-muted-foreground hover:text-primary">
+                <Link
+                  href="/testimonios"
+                  className="text-muted-foreground hover:text-primary"
+                >
                   Testimonios
                 </Link>
               </li>
               <li>
-                <Link href="/contacto" className="text-muted-foreground hover:text-primary">
+                <Link
+                  href="/contacto"
+                  className="text-muted-foreground hover:text-primary"
+                >
                   Contacto
                 </Link>
               </li>
               <li>
-                <Link href="/reservar" className="text-muted-foreground hover:text-primary">
+                <Link
+                  href="/reservar"
+                  className="text-muted-foreground hover:text-primary"
+                >
                   Reservar
                 </Link>
               </li>
             </ul>
           </div>
-          
+
           <div className="space-y-4">
             <h3 className="font-semibold">Contacto</h3>
             <ul className="space-y-2 text-sm">
@@ -62,7 +75,7 @@ export function SiteFooter() {
               </li>
             </ul>
           </div>
-          
+
           <div className="space-y-4">
             <h3 className="font-semibold">Redes Sociales</h3>
             <div className="flex gap-4">
@@ -88,13 +101,14 @@ export function SiteFooter() {
             <CtaWhatsapp variant="outline" size="sm" />
           </div>
         </div>
-        
+
         <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Juegotenis. Todos los derechos reservados.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Juegotenis. Todos los derechos
+            reservados.
+          </p>
         </div>
       </div>
     </footer>
   );
 }
-
-
